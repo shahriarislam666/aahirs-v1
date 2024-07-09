@@ -7,16 +7,27 @@
   padding: 0;
 }
 
-.glass-background {
-  width: 1200px;
-  height: 520px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+.blur {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px);
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0));
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  margin: 120px auto;
+  /* margin: 120px auto; */
   transition: transform 0.6s;
 }
 
@@ -57,8 +68,6 @@
   margin-top: 60px;
   border: none;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -102,7 +111,7 @@
   transform: scale(1.05);
 }
 
-.glass-background:hover {
+.hero:hover {
   transform: translateY(10px);
 }
 
@@ -111,7 +120,7 @@
 }
 
 @media (max-width: 1300px) {
-  .glass-background {
+  .hero {
     width: 800px;
   }
 
@@ -133,5 +142,66 @@
   .learn-more:last-child {
     margin-top: 15px;
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero {
+    margin-top: 200px;
+    padding-bottom: 32.5px;
+    width: 80%;
+  }
+
+  .learn-more {
+    margin: 0 auto;
+  }
+
+  .learn-more:last-child {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .inner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .poster-showcase {
+    width: 300px;
+  }
+
+  .poster-title {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .poster-desc {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .poster-details {
+    text-align: center;
+    list-style: none;
+  }
+
+  .learn-more {
+    font-size: 0.8em;
+  }
+
+  .learn-more:last-child {
+    font-size: 0.7em;
   }
 }

@@ -42,11 +42,11 @@
 
   <!-- main hero section -->
 
-  <main class="hero">
-    <div class="glass-background">
+  <main>
+    <div class="hero blur">
       <div class="inner-content">
         <a href="https://www.behance.net/gallery/201552221/SEEK" target="_blank">
-          <img src="/images/posters/seek.png" alt="brutalist poster" class="poster-showcase">
+          <img src="./images/posters/seek.png" alt="brutalist poster" class="poster-showcase">
         </a>
         <div class="texts">
           <p class="poster-title">
@@ -65,8 +65,8 @@
             <li>Assets: Pinterest</li>
           </ul>
 
-          <button class="learn-more">Learn More</button>
-          <button class="learn-more">More Like This</button>
+          <button class="learn-more blur">Learn More</button>
+          <button class="learn-more blur">More Like This</button>
         </div>
       </div>
     </div>
@@ -81,16 +81,20 @@
 
   <script>
     function showSidebar() {
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'flex'
+      const sidebar = document.querySelector(".sidebar");
+      const hero = document.querySelector(".hero");
+      sidebar.style.display = "flex";
+      hero.classList.remove("blur");
     }
 
     function hideSidebar() {
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'none'
+      const sidebar = document.querySelector(".sidebar");
+      const hero = document.querySelector(".hero");
+      sidebar.style.display = "none";
+      hero.classList.add("blur");
     }
   </script>
-  <script src="/js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
