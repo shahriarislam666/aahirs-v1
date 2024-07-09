@@ -188,7 +188,8 @@ main {
   }
 
   .poster-desc {
-    font-size: 0.9em;
+    width: 270px;
+    font-size: 0.7em;
     text-align: center;
   }
 
